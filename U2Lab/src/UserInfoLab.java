@@ -1,22 +1,38 @@
+import java.util.Scanner;
 public class UserInfoLab {
     public static void main(String[] args) {
+        String firstName = "";
+        String lastName = "";
+        String password = "";
         // Part 1
         // Create a Scanner for keyboard input
+        Scanner scan = new Scanner(System.in);
         // Ask the user to enter their first and last name and pass these
+        System.out.println("what is your first name");
+        firstName = scan.nextLine();
+        System.out.println("what is your last name");
+        lastName = scan.nextLine();
         // values to the generateUsername method and save the returned result.
+        String username = generateUsername(firstName,lastName);
 
         // Part 2
         // Ask the user to enter a password and pass this value to the validatePassword method.
+        System.out.println("enter your password");
+        password = scan.nextLine();
         // The validatePassword method will check if the password meets the criteria:
-
+        boolean check = validatePassword(password);
         // Part 3
         // If the user entered a valid password in step 2, then ask the user to enter their
         // credit card number and pass this value to the maskCreditCard method.
+        System.out.println("you have entered your password correctly, now type in your credit card number");
+        String creditCardNumber = maskCreditCard(scan.nextLine());
+        if(!creditCardNumber.equals("N/A")){
+            // Part 4
+            // If the user entered a valid password AND valid credit card number, display the output
+            // as shown in the demo video
+            // https://drive.google.com/file/d/1sMOw5wkOgSfuUcvQhFyZ5flnv_d9qQd3/view?usp=sharing
+        }
 
-        // Part 4
-        // If the user entered a valid password AND valid credit card number, display the output
-        // as shown in the demo video
-        // https://drive.google.com/file/d/1sMOw5wkOgSfuUcvQhFyZ5flnv_d9qQd3/view?usp=sharing
 
     }
 
