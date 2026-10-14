@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-
 public class UserInfoLab {
     public static void main(String[] args) {
         String firstName = "";
@@ -36,17 +34,13 @@ public class UserInfoLab {
             // Part 4
             // If the user entered a valid password AND valid credit card number, display the output as shown in the demo video
             // https://drive.google.com/file/d/1sMOw5wkOgSfuUcvQhFyZ5flnv_d9qQd3/view?usp=sharing
-            if (!creditCard.equals("N/A")) {
 
                 System.out.println("Congrats, Here's your info...\nUsername: " + username + "\nCredit card: " + creditCard);
-            }
-            else{
-                System.out.println("your credit card number did not work. Restart the program.");
-            }
         }
         else{
             System.out.println("Your password did not work please restart the program.");
         }
+
     }
 
     public static String generateUsername(String firstName, String lastName) {
